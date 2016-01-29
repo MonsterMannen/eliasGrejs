@@ -44,7 +44,7 @@ public class LuhnAlgTester {
 	}
 
 
-	//cool function. to big numbers for integers.
+	//cool function. too big numbers for integers.
 	public static int[] intToArray(int value){
 		int i = 0;
 		int length = String.valueOf(value).length();
