@@ -2,7 +2,6 @@ public class LuhnAlgorithm {
 
 	//param integer divided into an array gg
 	public static boolean luhnAlg(int[] array){
-		//check number
 		int x = 1;	//for checking if even number
 		int sum = 0;
 		int temp = 0;
@@ -12,9 +11,6 @@ public class LuhnAlgorithm {
 			if(temp > 9) temp -= 9;
 			sum += temp;
 		}
-
-		//check control digit
-		//TODO fix
 
 		return (sum % 10 == 0);
 	}
