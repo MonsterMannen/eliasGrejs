@@ -2,14 +2,32 @@ public class LuhnAlgTester {
 
 	//test LuhnAlg()
 	public static void main(String[] args){
-		String number = "8112189876";
-		int[] array1;
-		int[] array2 = {8,1,1,2,1,8,9,8,7,6};
 
-		array1 = stringToIntArray(number);
+		int[] array = {8,1,1,2,1,8,9,8,7,6};
 
-		boolean b = LuhnAlgorithm.luhnAlg(array1);
-		System.out.println(b);
+		System.out.println("This should be true: " +
+			LuhnAlgorithm.luhnAlg(array));
+
+		//-------------------------------
+		int nr = 1000;
+
+		GenerateNumbers[] gNumbers = new GenerateNumbers[nr];
+		for(int i = 0; i < nr; i++){
+			gNumbers[i] = new GenerateNumbers(10);
+		}
+
+		int accepterNumbers = 0;
+
+		for(int i = 0; i < nr; i++){
+			String s = gNumbers[i].getNumer();
+			//System.out.println(s);
+			boolean check = LuhnAlgorithm.luhnAlg(stringToIntArray(s));
+			if(check) accepterNumbers++;
+		}
+
+		System.out.println("accepted numbers: " + accepterNumbers 
+			+ " / " + nr);
+		//-------------------------------
 	}
 
 
