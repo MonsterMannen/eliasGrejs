@@ -16,16 +16,16 @@ public class LuhnAlgTester {
 			gNumbers[i] = new GenerateNumbers(10);
 		}
 
-		int accepterNumbers = 0;
+		int acceptedNumbers = 0;
 
 		for(int i = 0; i < nr; i++){
 			String s = gNumbers[i].getNumer();
 			//System.out.println(s);
 			boolean check = LuhnAlgorithm.luhnAlg(stringToIntArray(s));
-			if(check) accepterNumbers++;
+			if(check) acceptedNumbers++;
 		}
 
-		System.out.println("accepted numbers: " + accepterNumbers 
+		System.out.println("accepted numbers: " + acceptedNumbers 
 			+ " / " + nr);
 		//-------------------------------
 	}
