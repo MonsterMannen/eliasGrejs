@@ -1,24 +1,88 @@
+import java.io.*;
+import java.util.*;
+
 public class readMembers {
 
+	public ArrayList<Member> members = new ArrayList<>();
+
+	public String fileName = "members.txt";	//file to read from
+	public File file = new File(fileName);
+	public String line;
+	public int pos;
+	public Member newMember;
+	public Scanner sc;
+
+	public int id = 0;
+	public String name = "";
+	public String familyName = "";
+	public String birthDate = "";
+	public String memberSinceDate = "";
+	public int role = 0;
+	public String team = "";
+	public int gender = 1;
+
 	public static void main(String[] args){
+		readMembers rm = new readMembers();
+		rm.readMembers();
+		System.out.println(rm.members.size());
 
-		private ArrayList<Member> members = new ArrayList<>();
-		private int id = 0;
-		private String name 0 "";
-		private String familyName = "";
-		private String birthDate = "";
-		private String memberSinceDate = "";
-		private int role = 0;
-		private String team = "";
-		private int gender = 1;
-		private Member newMember;
+	}
+
+	public void readMembers(){
 		
+		
+		try{
+			sc = new Scanner(file);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}
 
-		while(true){
-			//get all variables
+		while(sc.hasNextLine()){
+			//get the row with all data
+			line = sc.nextLine();
 
+			//get id
+			pos = line.indexOf(';');
+			id = Integer.parseInt(line.substring(0, pos));
+			line = line.substring(pos+1);
+
+			//get name
+			pos = line.indexOf(';');
+			name = line.substring(0, pos);
+			line = line.substring(pos+1);
+
+			//get familyName
+			pos = line.indexOf(';');
+			familyName = line.substring(0, pos);
+			line = line.substring(pos+1);
+
+			//get birthDate
+			pos = line.indexOf(';');
+			birthDate = line.substring(0, pos);
+			line = line.substring(pos+1);
+
+			//get memberSinceDate
+			pos = line.indexOf(';');
+			memberSinceDate = line.substring(0, pos);
+			line = line.substring(pos+1);
+
+			//get role
+			pos = line.indexOf(';');
+			role = Integer.parseInt(line.substring(0, pos));
+			line = line.substring(pos+1);
+
+			//get team
+			pos = line.indexOf(';');
+			team = line.substring(0, pos);
+			line = line.substring(pos+1);
+
+			//get gender
+			gender = Integer.parseInt(line);
+
+			//create member
 			newMember = new Member(id, name, familyName, birthDate,
 						 		memberSinceDate, role, team, gender);
+			//put member in list
 			members.add(newMember);
 		}
 
