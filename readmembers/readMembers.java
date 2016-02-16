@@ -21,6 +21,7 @@ public class readMembers {
 	public String team = "";
 	public int gender = 1;
 
+	// <<< main function >>>
 	public static void main(String[] args){
 		readMembers rm = new readMembers();
 		rm.readMembers();
@@ -29,8 +30,7 @@ public class readMembers {
 	}
 
 	public void readMembers(){
-		
-		
+
 		try{
 			sc = new Scanner(file);
 		}catch(Exception ex){
@@ -85,7 +85,5 @@ public class readMembers {
 			//put member in list
 			members.add(newMember);
 		}
-
 	}
-
 }

@@ -21,4 +21,19 @@ public class Member {
 		this.team = team;
 		this.gender = gender;
 	}
+
+	public void printMember(){
+		System.out.println();
+	}
 }
+
+/*
+	/\
+	||
+	||
+	||
+  *====*
+	||    
+    OO
+
+*/
