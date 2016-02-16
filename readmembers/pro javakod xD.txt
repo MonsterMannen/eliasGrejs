@@ -1,3 +1,5 @@
+//not my file :^)
+
 while(sc.hasNextLine){
 
 String line = sc.nextLine();
