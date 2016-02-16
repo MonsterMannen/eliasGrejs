@@ -84,6 +84,9 @@ public class readMembers {
 						 		memberSinceDate, role, team, gender);
 			//put member in list
 			members.add(newMember);
+
+			//test
+			newMember.printMember();
 		}
 	}
 }

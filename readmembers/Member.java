@@ -23,7 +23,9 @@ public class Member {
 	}
 
 	public void printMember(){
-		System.out.println();
+		System.out.println(id + ", " + name + ", " + familyName + ", "
+		 + birthDate + ", " + memberSinceDate + ", " + role + ", "
+		 + team + ", " + gender);
 	}
 }
 
