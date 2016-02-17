@@ -37,6 +37,11 @@ public class Member implements Comparable {
 	}
 
 	@Override
+	public String toString(){
+		return name + " " + familyName;
+	}
+
+	@Override
 	public int compareTo(Object obj){
 		Member memeber = (Member) obj;
 		int theD = familyName.compareTo(memeber.getFamilyName());
