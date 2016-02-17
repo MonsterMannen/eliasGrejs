@@ -45,6 +45,13 @@ public class Member implements Comparable {
 		}
 		return theD;
 	}
+
+	//works?
+	@Override
+	public boolean equals(Object obj){
+		Member memeber = (Member) obj;
+		return (this.compareTo(memeber) != 0);
+	}
 }
 
 /*
