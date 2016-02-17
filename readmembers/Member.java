@@ -50,7 +50,7 @@ public class Member implements Comparable {
 	@Override
 	public boolean equals(Object obj){
 		Member memeber = (Member) obj;
-		return (this.compareTo(memeber) != 0);
+		return (this.compareTo(memeber) == 0);
 	}
 }
 
