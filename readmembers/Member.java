@@ -1,4 +1,4 @@
-public class Member {
+public class Member implements Comparable {
 	//variables
 	private int id;
 	private String name;
@@ -22,10 +22,28 @@ public class Member {
 		this.gender = gender;
 	}
 
+	public String getFamilyName(){
+		return familyName;
+	}
+
+	public String getName(){
+		return name;
+	}
+
 	public void printMember(){
 		System.out.println(id + ", " + name + ", " + familyName + ", "
 		 + birthDate + ", " + memberSinceDate + ", " + role + ", "
 		 + team + ", " + gender);
+	}
+
+	@Override
+	public int compareTo(Object obj){
+		Member memeber = (Member) obj;
+		int theD = familyName.compareTo(memeber.getFamilyName());
+		if(theD == 0){
+			theD = name.compareTo(memeber.getName());
+		}
+		return theD;
 	}
 }
 
@@ -38,5 +56,7 @@ public class Member {
 *====*
   ||    
   OO
+
+  rogue sword
 
 */

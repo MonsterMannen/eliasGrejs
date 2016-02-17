@@ -5,7 +5,7 @@ public class readMembers {
 
 	public ArrayList<Member> members = new ArrayList<>();
 
-	public String fileName = "members.txt";	//file to read from
+	public String fileName = "memebers.txt";	//file to read from
 	public File file = new File(fileName);
 	public String line;
 	public int pos;
@@ -25,7 +25,7 @@ public class readMembers {
 	public static void main(String[] args){
 		readMembers rm = new readMembers();
 		rm.readMembers();
-		System.out.println(rm.members.size());
+		System.out.println("\n" + rm.members.size() + " memebers read from " + rm.fileName);
 
 	}
 
